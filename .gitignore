@@ -1,0 +1,12 @@
+.git/
+.idea/
+.vertx/
+target/
+*/sonarlint/*
+*.log
+*.log.gz
+*.iml
+*.ipr
+*.iws
+*.mdf
+*.ldf
