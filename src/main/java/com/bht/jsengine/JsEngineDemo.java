@@ -61,6 +61,6 @@ public class JsEngineDemo {
         log.info("declaring function isValidRequest... {}", sandbox.eval(isValidRequestFunc));
 
         log.info("Validate request1: {}", sandbox.eval("isValidRequest(request1)"));
-        log.info("Validate request1: {}", sandbox.eval("isValidRequest(request2)"));
+        log.info("Validate request2: {}", sandbox.eval("isValidRequest(request2)"));
     }
 }
