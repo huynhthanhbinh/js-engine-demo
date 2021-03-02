@@ -9,8 +9,42 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <basePackage>com.bht.jsengine</basePackage>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <maven.test.skip>true</maven.test.skip>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.build.timestamp.format>yyyy/MM/dd hh:mm:ss a,z</maven.build.timestamp.format>
+
+        <log4j.version>2.13.3</log4j.version>
+        <lombok.version>1.18.18</lombok.version>
+        <nashorn-sandbox.version>0.1.31</nashorn-sandbox.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.javadelight</groupId>
+            <artifactId>delight-nashorn-sandbox</artifactId>
+            <version>0.1.31</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+    </dependencies>
 </project>
