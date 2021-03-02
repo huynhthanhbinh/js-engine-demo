@@ -19,7 +19,6 @@ public class JsEngineDemo {
 
     public static void main(String[] args) throws ScriptException {
         log.info("JsEngineDemo Init...");
-
         NashornSandbox sandbox = NashornSandboxes.create("--language=es6");
         sandbox.setMaxCPUTime(100);
         sandbox.setMaxMemory(100 * 1024L);
@@ -58,7 +57,8 @@ public class JsEngineDemo {
         sandbox.inject("request2", request2);
 
         String isValidRequestFunc = "function isValidRequest(requestStr) { const request = JSON.parse(requestStr); print(request.airlineCode); return request.airlineCode === 'vna'; };";
-        log.info("declaring function isValidRequest... {}", sandbox.eval(isValidRequestFunc));
+        log.info("declaring function isValidRequest... {}", isValidRequestFunc);
+        sandbox.eval(isValidRequestFunc);
 
         log.info("Validate request1: {}", sandbox.eval("isValidRequest(request1)"));
         log.info("Validate request2: {}", sandbox.eval("isValidRequest(request2)"));
